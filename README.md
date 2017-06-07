@@ -1,17 +1,29 @@
 # AEM Project to show Permissions helper class
 
 
-This helper class, AEMPermissionsToJCRPrivileges, takes in an AEM permission and returns an ArrayList<Privileges> of the JCR Privileges.
+This helper class, *AEMPermissionsToJCRPrivileges*, takes in an AEM permission (String) and returns an ArrayList<Privileges> of the JCR Privileges.
+`public static ArrayList<Privilege> getPriviledge(AccessControlManager acm, String string)`
 
-You can test these relationships by using the AEMPermissionServlet
+You can test these relationships by using the AEMPermissionServlet where
+
+`http://localhost:4502/bin/permissions.html` will show all relationships
+
+`http://localhost:4502/bin/permissions.selector.html` where the selector is an AEM permission
 
 Below is the full mapping this class does.
+
 `"READ": ["jcr:read"]`
+
 `"MODIFY": ["jcr:modifyProperties","jcr:lockManagement","jcr:versionManagement","jcr:removeChildNodes","jcr:removeNode","jcr:addChildNodes","jcr:nodeTypeManagement"]`
+
 `"CREATE": ["jcr:addChildNodes","jcr:nodeTypeManagement"]`
+
 `"DELETE": ["jcr:removeChildNodes","jcr:removeNode"]`
+
 `"READACL": ["jcr:readAccessControl"]`
+
 `"EDITACL": ["jcr:modifyAccessControl"]`
+
 `"REPLICATE": ["crx:replicate"]`
 
 ## Modules
