@@ -2,15 +2,16 @@
 
 
 This helper class, *AEMPermissionsToJCRPrivileges*, takes in an AEM permission (String) and returns an ArrayList<Privileges> of the JCR Privileges.
+
 `public static ArrayList<Privilege> getPriviledge(AccessControlManager acm, String string)`
 
-You can test these relationships by using the AEMPermissionServlet where
+### You can test these relationships by using the AEMPermissionServlet where
 
 `http://localhost:4502/bin/permissions.html` will show all relationships
 
 `http://localhost:4502/bin/permissions.selector.html` where the selector is an AEM permission
 
-Below is the full mapping this class does.
+### Below is the full mapping *AEMPermissionsToJCRPrivileges* does.
 
 `"READ": ["jcr:read"]`
 
